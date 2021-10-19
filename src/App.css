@@ -1,38 +1,104 @@
 .App {
   text-align: center;
+  background-color: rgb(107, 103, 103);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  background-color: rgb(219, 212, 212);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.loading {
+  position: relative;
+  margin-top: 20em;
+  left: 45%;
+  height: 150px;
+  width: 150px;
+  background-color: rgb(255, 105, 94);
+  border: 1px solid rgb(79, 79, 214);
+  border-radius: 50%;
+  animation-name: bounce;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes bounce {
+  0% {
+    background-color: rgb(233, 92, 127);
+  }
+  10% {
+    transform: rotateY(30deg);
+    background: linear-gradient(30deg, red, rgb(202, 49, 74))
+  }
+  20% {
+    transform: rotateY(50deg);
+    background: linear-gradient(30deg, red, rgb(184, 43, 66))
+  }
+  30% {
+    transform: rotateY(70deg);
+    background: linear-gradient(30deg, red, rgb(73, 230, 143))
+  }
+  40% {
+    transform: rotateY(90deg);
+    background: linear-gradient(30deg, red, rgb(50, 192, 133))
+  }
+  50% {
+    transform: rotateY(110deg);
+    background: linear-gradient(30deg, red, rgb(45, 189, 40), rgb(34, 85, 32))
+  }
+  60% {
+    transform: rotateY(130deg);
+    background: linear-gradient(30deg, rgb(26, 207, 35), rgb(4, 139, 27))
+  }
+  70% {
+    transform: rotateY(150deg);
+    background: linear-gradient(30deg, rgb(103, 179, 96), rgb(8, 155, 45))
+  }
+  80% {
+    transform: rotateY(180deg);
+    background: linear-gradient(30deg, rgb(47, 124, 2), rgb(0, 253, 34))
+  }
+  90% {
+    transform: rotateY(200deg);
+    transform: translateZ(-100%);
+    background: linear-gradient(30deg, rgb(0, 109, 0), rgb(0, 114, 38))
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
+.grid-container {
+  background-color: rgb(219, 212, 212);
+  height: 100vh;
+  overflow-y: auto;
+  margin-left: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px 20px;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media only screen and (min-device-width: 320px) and (max-width: 480px) {
+  .grid-container {
+      grid-template-columns: 1fr;
+      gap: 10px;
+      margin-left: 10px;
+      margin-right: 10px;
   }
-  to {
-    transform: rotate(360deg);
+  .overlay-menu {
+      margin-top: 15%;
+      display: flex;
+      flex-direction: column;
+      color: white;
+    }
+    .loading{
+      left: 30%;
+    }
+
+
+}
+@media only screen and (min-device-width: 768px) and (max-width: 960px) {
+  .grid-container {
+      margin-right: 20px;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px 10px;
   }
 }
