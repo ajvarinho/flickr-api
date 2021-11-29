@@ -4,7 +4,7 @@ Basic idea is to fetch most recent uploads and be able to favorite certain image
 I used React Hooks to fetch API data, to build the favourites functionality on app use and (re)load - useState was used for data retrieval from API, infinite scroll and additional data loading, whereas the useEffect managed the favourites functionality and reload. For styling, I used basic CSS and did media queries for smartphones and tablets; the queries and app were tested on latest versions of Mozilla Firefox and Google Chrome.
 
 For application previews, clone or fork this repo to your local machine, and make sure to cd into that folder and install React app. Please check the React instructions on how to install React on your particular device - https://github.com/facebook/create-react-app.
-I will eventually deploy this app to Heroku, to show off my new skills to prospective employers - if you are one of them, do get in touch, please.
+
 
 Until then, here are some screenshots:
 
