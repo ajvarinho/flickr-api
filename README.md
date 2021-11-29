@@ -6,7 +6,6 @@ I used React Hooks to fetch API data, to build the favourites functionality on a
 For application previews, clone or fork this repo to your local machine, and make sure to cd into that folder and install React app. Please check the React instructions on how to install React on your particular device - https://github.com/facebook/create-react-app.
 
 
-Until then, here are some screenshots:
 
 Favourites load/reload
 
